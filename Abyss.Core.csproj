@@ -11,8 +11,6 @@
 
         <Nullable>enable</Nullable>
 
-        <DontReferenceWinch>true</DontReferenceWinch>
-
         <Platforms>AnyCPU</Platforms>
 
         <ProjectName>Abyss.Core</ProjectName>
@@ -24,7 +22,6 @@
         <Authors>GrahamKracker</Authors>
 
         <Copyright>Copyright 2023</Copyright>
-        
     </PropertyGroup>
 
     <ItemGroup>
