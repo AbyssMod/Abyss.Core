@@ -8,14 +8,14 @@ namespace Abyss.Api;
 public abstract partial class ModContent
 {
     /// <summary>
-    /// Gets the singleton instance of a particular ModContent or BloonsTD6Mod based on its type
+    /// Gets the singleton instance of a particular ModContent or DredgeMod based on its type
     /// </summary>
     /// <typeparam name="T">The type to get the instance of</typeparam>
     /// <returns>The singleton instance of it</returns>
     public static T GetInstance<T>() where T : IModContent => ModContentInstance<T>.Instance;
 
     /// <summary>
-    /// Gets the official instance of a particular ModContent or BloonsTD6Mod based on its type
+    /// Gets the official instance of a particular ModContent or DredgeMod based on its type
     /// </summary>
     /// <param name="type">The type to get the instance of</param>
     /// <returns>The official instance of it</returns>
