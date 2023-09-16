@@ -1,0 +1,59 @@
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="UpdateNuget" AfterTargets="Pack" Condition="Exists('$(TargetDir)$(TargetName).dll')">
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.core"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.items"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.abilities"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.poi"/>
+
+        <Exec Command="dotnet restore C:\Users\gjguz\source\repos\Dredge\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
+    </Target>
+
+
+    <PropertyGroup>
+        <Dredge>C:\Program Files (x86)\Steam\steamapps\common\DREDGE</Dredge>
+        <ManagedFolder>$(Dredge)\DREDGE_Data\Managed</ManagedFolder>
+        <OutputFolder Condition="'$(OutputFolder)' == ''">BepInEx\plugins</OutputFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="$(Dredge)\BepInEx\core\0Harmony.dll" Private="false"/>
+        <Reference Include="$(Dredge)\BepInEx\core\BepInEx.dll" Private="false"/>
+        <Reference Include="$(Dredge)\BepInEx\core\BepInEx.Harmony.dll" Private="false"/>
+        <Reference Include="$(Dredge)\BepInEx\core\Mono.Cecil.dll" Private="false"/>
+        <Reference Include="$(Dredge)\BepInEx\core\MonoMod.RuntimeDetour.dll" Private="false"/>
+        <Reference Include="$(Dredge)\BepInEx\core\MonoMod.Utils.dll" Private="false"/>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(UseDredgeLibs)' == 'true'">
+        <PackageReference Include="DredgeGameLibs" Version="1.2.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(UseDredgeLibs)' != 'true'">
+        <PackageReference Include="DredgeGameLibs" Version="1.2.0.1"/>
+    </ItemGroup>
+
+    <!--Automatic embeds-->
+    <ItemGroup Condition="'$(AutoEmbed)' != 'false'">
+        <EmbeddedResource Include="**/*.png"/>
+        <EmbeddedResource Include="**/*.jpg"/>
+        <EmbeddedResource Include="**/*.wav"/>
+        <EmbeddedResource Include="**/*.bundle"/>
+        <EmbeddedResource Include="**/*.bytes"/>
+        <!--<EmbeddedResource Condition="Exists('AbyssData.json')" Include="ModHelperData.json"/>
+        <EmbeddedResource Condition="Exists('AbyssData.txt')" Include="ModHelperData.txt"/> -->
+    </ItemGroup>
+
+    <Target Name="MoveDllToPlugins" AfterTargets="Build" Condition="Exists('$(TargetDir)$(TargetName).dll')">
+        <Message Text="Copying $(ProjectName).dll to $(OutputFolder) Folder..." Importance="High"/>
+
+        <Copy SourceFiles="$(TargetDir)$(TargetName).dll"
+              DestinationFiles="$(Dredge)\$(OutputFolder)\$(ProjectName).dll"/>
+    </Target>
+    <Target Name="MoveXmlToPlugins" AfterTargets="Build" Condition="Exists('$(TargetDir)$(ProjectName).xml')">
+        <Message Text="Copying $(ProjectName).xml to $(OutputFolder) Folder..." Importance="High"/>
+
+        <Copy SourceFiles="$(TargetDir)$(ProjectName).xml"
+              DestinationFiles="$(Dredge)\$(OutputFolder)\$(ProjectName).xml"/>
+    </Target>
+</Project>

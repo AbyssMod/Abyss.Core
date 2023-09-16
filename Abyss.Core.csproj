@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <RootNamespace>Abyss</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <DebugType>embedded</DebugType>
+        <LangVersion>default</LangVersion>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+        <Nullable>enable</Nullable>
+
+        <DontReferenceWinch>true</DontReferenceWinch>
+
+        <Platforms>AnyCPU</Platforms>
+
+        <ProjectName>Abyss.Core</ProjectName>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <Version>0.0.1</Version>
+
+        <Authors>GrahamKracker</Authors>
+
+        <Copyright>Copyright 2023</Copyright>
+        
+    </PropertyGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Abyss.Items"/>
+        <InternalsVisibleTo Include="Abyss.Abilities"/>
+    </ItemGroup>
+
+
+
+
+    <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>
+    <Import Condition="!Exists('..\..\dredge.targets')" Project="dredge.targets"/>
+</Project>
