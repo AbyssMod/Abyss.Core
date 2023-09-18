@@ -71,18 +71,18 @@ internal sealed class AbyssMain : DredgeMod
                 var settingsMenu = GameObject.Find("SettingsDialog");
                 var modsMenu = Instantiate(settingsMenu, settingsMenu.transform.parent, false).gameObject;
 
-                Destroy(modsButton.GetComponentInChildren<LocalizeStringEvent>());
-
-                Destroy(modsMenu.GetComponent<SettingsDialog>());
-                Destroy(modsButton.GetComponent<UITransitionEffect>());
-                Destroy(modsButton.GetComponent<BasicButtonWrapper>());
-                Destroy(modsButton.GetComponent<BasicButton>());
-                Destroy(modsButton.GetComponent<UISelectable>());
-                Destroy(modsButton.GetComponent<CustomSelectable>());
+                DestroyImmediate(modsButton.GetComponentInChildren<LocalizeStringEvent>());
+                DestroyImmediate(modsMenu.GetComponent<SettingsDialog>());
+                DestroyImmediate(modsButton.GetComponent<UITransitionEffect>());
+                DestroyImmediate(modsButton.GetComponent<BasicButtonWrapper>());
+                DestroyImmediate(modsButton.GetComponent<BasicButton>());
+                DestroyImmediate(modsButton.GetComponent<UISelectable>());
+                DestroyImmediate(modsButton.GetComponent<CustomSelectable>());
 
                 var modsMenuComponent = modsMenu.AddComponent<ModsMenu>();
 
                 var basicButton = modsButton.AddComponent<ModsMenuButton>();
+                basicButton.onClick ??= new Button.ButtonClickedEvent();
 
                 basicButton.onClick.AddListener(() =>
                 {
@@ -90,7 +90,7 @@ internal sealed class AbyssMain : DredgeMod
                     modsMenuComponent.OnClick();
                 });
 
-
+                
             }
 
 

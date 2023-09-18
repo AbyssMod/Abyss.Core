@@ -29,9 +29,6 @@
         <InternalsVisibleTo Include="Abyss.Abilities"/>
     </ItemGroup>
 
-
-
-
     <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>
     <Import Condition="!Exists('..\..\dredge.targets')" Project="dredge.targets"/>
 </Project>

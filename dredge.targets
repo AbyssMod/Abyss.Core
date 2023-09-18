@@ -1,9 +1,9 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Target Name="UpdateNuget" AfterTargets="Pack" Condition="Exists('$(TargetDir)$(TargetName).dll')">
-        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.core"/>
-        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.items"/>
-        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.abilities"/>
-        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.poi"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.core" ContinueOnError="true"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.items" ContinueOnError="true"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.abilities" ContinueOnError="true"/>
+        <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.poi" ContinueOnError="true"/>
 
         <Exec Command="dotnet restore C:\Users\gjguz\source\repos\Dredge\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
     </Target>

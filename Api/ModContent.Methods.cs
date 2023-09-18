@@ -12,7 +12,7 @@ public abstract partial class ModContent
     /// </summary>
     /// <typeparam name="T">The type to get the instance of</typeparam>
     /// <returns>The singleton instance of it</returns>
-    public static T GetInstance<T>() where T : IModContent => ModContentInstance<T>.Instance;
+    public static T? GetInstance<T>() where T : IModContent => ModContentInstance<T>.Instance;
 
     /// <summary>
     /// Gets the official instance of a particular ModContent or DredgeMod based on its type
@@ -24,7 +24,7 @@ public abstract partial class ModContent
     /// <summary>
     /// Gets the id of a resource by appending the mod's ID prefix to its name
     /// </summary>
-    public static string GetId(DredgeMod dredgeMod, string name) => dredgeMod.IDPrefix + name;
+    public static string GetId(DredgeMod? dredgeMod, string name) => dredgeMod?.IDPrefix + name;
 
     /// <summary>
     /// Gets the id of a resource by appending the mod's ID prefix to its name
@@ -46,22 +46,22 @@ public abstract partial class ModContent
     public string GetId(string name) => GetId(Mod, name);
 
     /// <summary>
-    /// Gets whether a texture with a given name has been loaded by the Mod Helper for a mod
+    /// Gets whether a texture with a given name has been loaded
     /// </summary>
     /// <param name="dredgeMod">The mod to look in</param>
     /// <param name="name">The file name of your texture, without the extension</param>
-    public static bool TextureExists(DredgeMod dredgeMod, string name) =>
+    public static bool TextureExists(DredgeMod? dredgeMod, string name) =>
         ResourceHandler.Resources.ContainsKey(GetId(dredgeMod, name));
 
     /// <summary>
-    /// Gets whether a texture with a given name has been loaded by the Mod Helper for a mod
+    /// Gets whether a texture with a given name has been loaded
     /// </summary>
     /// <param name="name">The file name of your texture, without the extension</param>
     /// <typeparam name="T">The mod to look in</typeparam>
     public static bool TextureExists<T>(string name) where T : DredgeMod => TextureExists(GetInstance<T>(), name);
 
     /// <summary>
-    /// Gets whether a texture with a given name has been loaded by the Mod Helper for this mod
+    /// Gets whether a texture with a given name has been loaded
     /// </summary>
     /// <param name="name">The file name of your texture, without the extension</param>
     protected bool TextureExists(string name) => TextureExists(Mod, name);
@@ -72,7 +72,7 @@ public abstract partial class ModContent
     /// <param name="dredgeMod">The mod that adds this texture</param>
     /// <param name="fileName">The file name of your texture, without the extension</param>
     /// <returns>A Texture2D</returns>
-    public static Texture2D GetTexture(DredgeMod dredgeMod, string fileName) =>
+    public static Texture2D? GetTexture(DredgeMod? dredgeMod, string fileName) =>
         ResourceHandler.GetTexture(GetId(dredgeMod, fileName));
 
     /// <summary>
@@ -80,14 +80,14 @@ public abstract partial class ModContent
     /// </summary>
     /// <param name="fileName">The file name of your texture, without the extension</param>
     /// <returns>A Texture2D</returns>
-    protected Texture2D GetTexture(string fileName) => GetTexture(Mod, fileName);
+    protected Texture2D? GetTexture(string fileName) => GetTexture(Mod, fileName);
 
     /// <summary>
     /// Constructs a Texture2D for a given texture name within a mod
     /// </summary>
     /// <param name="fileName">The file name of your texture, without the extension</param>
     /// <returns>A Texture2D</returns>
-    public static Texture2D GetTexture<T>(string fileName) where T : DredgeMod =>
+    public static Texture2D? GetTexture<T>(string fileName) where T : DredgeMod =>
         GetTexture(GetInstance<T>(), fileName);
 
     /// <summary>
@@ -95,7 +95,7 @@ public abstract partial class ModContent
     /// </summary>
     /// <param name="fileName">The file name of your texture, without the extension.</param>
     /// <returns>The bytes associated with the texture.</returns>
-    protected byte[] GetTextureBytes(string fileName) => GetTextureBytes(Mod, fileName);
+    protected byte[]? GetTextureBytes(string fileName) => GetTextureBytes(Mod, fileName);
 
     /// <summary>
     /// Returns the Bytes associated with a texture.
@@ -103,14 +103,14 @@ public abstract partial class ModContent
     /// <param name="dredgeMod">The mod that adds this texture.</param>
     /// <param name="fileName">The file name of your texture, without the extension.</param>
     /// <returns>The bytes associated with the texture.</returns>
-    public static byte[] GetTextureBytes(DredgeMod dredgeMod, string fileName) =>
+    public static byte[]? GetTextureBytes(DredgeMod? dredgeMod, string fileName) =>
         ResourceHandler.GetTextureBytes(GetId(dredgeMod, fileName));
     /// <summary>
     /// Returns the Bytes associated with a texture.
     /// </summary>
     /// <param name="fileName">The file name of your texture, without the extension.</param>
     /// <returns>The bytes associated with the texture.</returns>
-    public static byte[] GetTextureBytes<T>(string fileName) where T : DredgeMod =>
+    public static byte[]? GetTextureBytes<T>(string fileName) where T : DredgeMod =>
         GetTextureBytes(GetInstance<T>(), fileName);
 
     /// <summary>
@@ -120,7 +120,7 @@ public abstract partial class ModContent
     /// <param name="name">The file name of your texture, without the extension</param>
     /// <param name="pixelsPerUnit">The pixels per unit for the Sprite to have</param>
     /// <returns>A Sprite</returns>
-    public static Sprite GetSprite(DredgeMod mod, string name, float pixelsPerUnit = 10f) =>
+    public static Sprite? GetSprite(DredgeMod? mod, string name, float pixelsPerUnit = 10f) =>
         ResourceHandler.GetSprite(GetId(mod, name), pixelsPerUnit);
 
     /// <summary>
@@ -129,7 +129,7 @@ public abstract partial class ModContent
     /// <param name="name">The file name of your texture, without the extension</param>
     /// <param name="pixelsPerUnit">The pixels per unit for the Sprite to have</param>
     /// <returns>A Sprite</returns>
-    public static Sprite GetSprite<T>(string name, float pixelsPerUnit = 10f) where T : DredgeMod =>
+    public static Sprite? GetSprite<T>(string name, float pixelsPerUnit = 10f) where T : DredgeMod =>
         GetSprite(GetInstance<T>(), name, pixelsPerUnit);
 
     /// <summary>
@@ -138,14 +138,14 @@ public abstract partial class ModContent
     /// <param name="name">The file name of your texture, without the extension</param>
     /// <param name="pixelsPerUnit">The pixels per unit for the Sprite to have</param>
     /// <returns>A Sprite</returns>
-    protected Sprite GetSprite(string name, float pixelsPerUnit = 10f) => GetSprite(Mod, name, pixelsPerUnit);
+    protected Sprite? GetSprite(string name, float pixelsPerUnit = 10f) => GetSprite(Mod, name, pixelsPerUnit);
 
     /// <summary>
     /// Gets a bundle from a mod with the specified name (no file extension)
     /// </summary>
     /// <param name="mod"></param>
     /// <param name="name"></param>
-    public static AssetBundle GetBundle(DredgeMod mod, string name)
+    public static AssetBundle? GetBundle(DredgeMod? mod, string name)
     {
         if (ResourceHandler.Bundles.TryGetValue(GetId(mod, name), out var bundle))
         {
@@ -153,7 +153,7 @@ public abstract partial class ModContent
         }
 
         AbyssLogger.Error($"Couldn't find bundle with name \"{name}\"");
-        var bundles = ResourceHandler.Bundles.Keys.Where(s => s.StartsWith(mod.IDPrefix)).ToList();
+        var bundles = ResourceHandler.Bundles.Keys.Where(s => s.StartsWith(mod?.IDPrefix ?? string.Empty)).ToList();
         if (bundles.Count == 0)
         {
             AbyssLogger.Error(
@@ -161,10 +161,10 @@ public abstract partial class ModContent
         }
         else
         {
-            AbyssLogger.Log($"The bundles that we did find in {mod.GetName()} have the names:");
+            AbyssLogger.Log($"The bundles that we did find in {mod?.GetName()} have the names:");
             foreach (var s in bundles)
             {
-                AbyssLogger.Error($"    {s.Replace(mod.IDPrefix, "")}");
+                AbyssLogger.Error($"    {s.Replace(mod?.IDPrefix ?? string.Empty, "")}");
             }
         }
 
@@ -175,11 +175,11 @@ public abstract partial class ModContent
     /// Gets a bundle from the mod T with the specified name (no file extension)
     /// </summary>
     /// <param name="name"></param>
-    public static AssetBundle GetBundle<T>(string name) where T : DredgeMod => GetBundle(GetInstance<T>(), name);
+    public static AssetBundle? GetBundle<T>(string name) where T : DredgeMod => GetBundle(GetInstance<T>(), name);
 
     /// <summary>
     /// Gets a bundle from your mod with the specified name (no file extension)
     /// </summary>
     /// <param name="name"></param>
-    protected AssetBundle GetBundle(string name) => GetBundle(Mod, name);
+    protected AssetBundle? GetBundle(string name) => GetBundle(Mod, name);
 }

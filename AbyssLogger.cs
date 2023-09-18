@@ -2,6 +2,9 @@
 
 namespace Abyss;
 
+/// <summary>
+/// Allows for easy logging from anywhere in the mod, using the mod's plugin type
+/// </summary>
 public static class AbyssLogger
 {
     /// <inheritdoc cref="Info{T}"/>

@@ -72,7 +72,7 @@ internal static class ResourceHandler
         }
     }
 
-    internal static Texture2D CreateTexture(string guid)
+    private static Texture2D? CreateTexture(string guid)
     {
         if (Resources.TryGetValue(guid, out var bytes))
         {
@@ -85,7 +85,7 @@ internal static class ResourceHandler
         return null;
     }
 
-    internal static Texture2D GetTexture(string id)
+    internal static Texture2D? GetTexture(string id)
     {
         if (TextureCache.TryGetValue(id, out var texture2d) && texture2d != null) return texture2d;
 
@@ -99,7 +99,7 @@ internal static class ResourceHandler
         new Rect(0, 0, texture.width, texture.height),
         new Vector2(0.5f, 0.5f), pixelsPerUnit);
 
-    internal static Sprite CreateSprite(string id, float pixelsPerUnit = 10.8f)
+    internal static Sprite? CreateSprite(string id, float pixelsPerUnit = 10.8f)
     {
         if (GetTexture(id) is { } texture)
         {
@@ -111,7 +111,7 @@ internal static class ResourceHandler
         return null;
     }
 
-    internal static Sprite GetSprite(string id, float pixelsPerUnit = 10.8f)
+    internal static Sprite? GetSprite(string id, float pixelsPerUnit = 10.8f)
     {
         if (SpriteCache.TryGetValue(id, out var sprite) && sprite != null) return sprite;
 

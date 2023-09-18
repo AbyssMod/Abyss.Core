@@ -12,9 +12,15 @@ using static Abyss.AbyssLogger;
 
 namespace Abyss;
 
+/// <summary>
+/// The base class for all mods using the api
+/// </summary>
 [PublicAPI]
 public abstract class DredgeMod : BaseUnityPlugin, IModContent
 {
+    /// <summary>
+    /// The harmony instance for this mod, if <see cref="CreateHarmonyInstance"/> is false, it will be null
+    /// </summary>
     public Harmony? HarmonyInstance { get; private set; }
 
     /// <summary>
@@ -25,7 +31,9 @@ public abstract class DredgeMod : BaseUnityPlugin, IModContent
     }
 
 
-
+    /// <summary>
+    /// A virtual call for the typical Unity start method
+    /// </summary>
     public virtual void Start()
     {
         foreach (var modContent in Content)
@@ -38,7 +46,7 @@ public abstract class DredgeMod : BaseUnityPlugin, IModContent
             {
                 Logger.LogError($"Failed to register {modContent.Id}");
                 Logger.LogError(e);
-                this.LoadErrors.Add($"Failed to register {modContent.Name}");
+                LoadErrors.Add($"Failed to register {modContent.Name}");
 
                 foreach (var rollbackAction in modContent.RollbackActions)
                 {
@@ -111,8 +119,14 @@ public abstract class DredgeMod : BaseUnityPlugin, IModContent
     }
 
 
+    /// <summary>
+    /// Whether to create a Harmony instance for this mod
+    /// </summary>
     public virtual bool CreateHarmonyInstance => true;
 
+    /// <summary>
+    /// Whether to automatically apply all Harmony patches in this mod
+    /// </summary>
     public virtual bool HarmonyPatchAll => true;
 
     /// <inheritdoc cref="BaseUnityPlugin.Logger"/>
@@ -120,21 +134,15 @@ public abstract class DredgeMod : BaseUnityPlugin, IModContent
 
     internal readonly List<string> LoadErrors = new();
 
-    private List<ModContent> content;
-
     /// <summary>
     /// All ModContent in ths mod
     /// </summary>
-    public IReadOnlyList<ModContent> Content
-    {
-        get => content;
-        internal set => content = value as List<ModContent>;
-    }
+    public IReadOnlyList<ModContent> Content { get; internal set; } = null!;
 
     /// <summary>
     /// The embedded resources (textures) of this mod
     /// </summary>
-    public Dictionary<string, byte[]> Resources { get; internal set; }
+    public Dictionary<string, byte[]> Resources { get; internal set; } = null!;
 
     /// <summary>
     /// The prefix used for the IDs of towers, upgrades, etc for this mod to prevent conflicts with other mods
