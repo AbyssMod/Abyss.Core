@@ -20,13 +20,15 @@
         <Version>0.0.1</Version>
 
         <Authors>GrahamKracker</Authors>
-
-        <Copyright>Copyright 2023</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="Abyss.Items"/>
         <InternalsVisibleTo Include="Abyss.Abilities"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include=".github\build.yml" />
     </ItemGroup>
 
     <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>
