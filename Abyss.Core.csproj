@@ -27,10 +27,6 @@
         <InternalsVisibleTo Include="Abyss.Abilities"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Include=".github\build.yml" />
-    </ItemGroup>
-
     <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>
     <Import Condition="!Exists('..\..\dredge.targets')" Project="dredge.targets"/>
 </Project>

@@ -12,15 +12,13 @@
         <Dredge>C:\Program Files (x86)\Steam\steamapps\common\DREDGE</Dredge>
         <ManagedFolder>$(Dredge)\DREDGE_Data\Managed</ManagedFolder>
         <OutputFolder Condition="'$(OutputFolder)' == ''">BepInEx\plugins</OutputFolder>
+        <RestoreAdditionalProjectSources>
+            https://nuget.bepinex.dev/v3/index.json;
+        </RestoreAdditionalProjectSources>
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="$(Dredge)\BepInEx\core\0Harmony.dll" Private="false"/>
-        <Reference Include="$(Dredge)\BepInEx\core\BepInEx.dll" Private="false"/>
-        <Reference Include="$(Dredge)\BepInEx\core\BepInEx.Harmony.dll" Private="false"/>
-        <Reference Include="$(Dredge)\BepInEx\core\Mono.Cecil.dll" Private="false"/>
-        <Reference Include="$(Dredge)\BepInEx\core\MonoMod.RuntimeDetour.dll" Private="false"/>
-        <Reference Include="$(Dredge)\BepInEx\core\MonoMod.Utils.dll" Private="false"/>
+        <PackageReference Include="BepInEx.Core" Version="5.*"/>
     </ItemGroup>
 
     <ItemGroup Condition="'$(DontUseDredgeLibs)' == 'true'">
