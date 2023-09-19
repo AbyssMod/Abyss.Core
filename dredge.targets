@@ -5,7 +5,7 @@
         <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.abilities" ContinueOnError="true"/>
         <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.poi" ContinueOnError="true"/>
 
-        <Exec Command="dotnet restore C:\Users\gjguz\source\repos\Dredge\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
+        <Exec Condition="'$(Configuration)' == 'Debug'" Command="dotnet restore C:\Users\gjguz\source\repos\Dredge\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
     </Target>
 
     <PropertyGroup>
