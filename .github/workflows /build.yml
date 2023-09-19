@@ -27,26 +27,26 @@ jobs:
       - name: Build
         run: dotnet build -c Release --property:OutputPath=${{ env.OutputDirectory }}
 
-      - name: Upload Nuget
+      - name: Upload Nuget Package
         uses: actions/upload-artifact@v3
         with:
-          name: nuget
+          name: ${{ github.event.repository.name }}.nupkg
           if-no-files-found: error
           retention-days: 7
-          path: ${{ env.OutputDirectory }}/*.nupkg
+          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.nupkg
 
-      - name: Upload Dlls
+      - name: Upload Dll
         uses: actions/upload-artifact@v3
         with:
-          name: dlls
+          name: ${{ github.event.repository.name }}.dll
           if-no-files-found: error
-          retention-days: 7
-          path: ${{ env.OutputDirectory }}/*.dll
+          retention-days: 90 
+          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.dll
           
-      - name: Upload XMLs
+      - name: Upload XML
         uses: actions/upload-artifact@v3
         with:
-          name: xmls
-          if-no-files-found: error
+          name: ${{ github.event.repository.name }}.xml
+          if-no-files-found: warn
           retention-days: 7
-          path: ${{ env.OutputDirectory }}/*.xml
+          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.xml
