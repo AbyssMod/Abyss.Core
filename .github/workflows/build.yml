@@ -8,7 +8,7 @@ on:
       - '*'
       
 jobs:
-  call-submodulebuild:
+  abyssworkflow:
     permissions:
       contents: write
     uses: AbyssMod/Abyss/.github/workflows/submodulebuild.yml@main
