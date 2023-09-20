@@ -6,47 +6,7 @@ on:
       - '*'
     tags:
       - '*' 
-env:
-  OutputDirectory: ${{ github.workspace}}/output
-  
+      
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Clone Repo
-        uses: actions/checkout@master
-        with:
-          submodules: true
-          
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 6.0.x
-
-      - name: Build
-        run: dotnet build -c Release --property:OutputPath=${{ env.OutputDirectory }}
-
-      - name: Upload Nuget Package
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ github.event.repository.name }}.nupkg
-          if-no-files-found: error
-          retention-days: 7
-          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.nupkg
-
-      - name: Upload Dll
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ github.event.repository.name }}.dll
-          if-no-files-found: error
-          retention-days: 90 
-          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.dll
-          
-      - name: Upload XML
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ github.event.repository.name }}.xml
-          if-no-files-found: warn
-          retention-days: 7
-          path: ${{ env.OutputDirectory }}/${{ github.event.repository.name }}.xml
+  call-workflow-in-another-repo:
+    uses: AbyssMod/Abyss/.github/workflows/submodulebuild.yml@main
