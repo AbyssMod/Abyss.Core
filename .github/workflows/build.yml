@@ -8,5 +8,5 @@ on:
       - '*' 
       
 jobs:
-  call-workflow-in-another-repo:
+  call-submodulebuild:
     uses: AbyssMod/Abyss/.github/workflows/submodulebuild.yml@main
