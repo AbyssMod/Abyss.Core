@@ -9,4 +9,6 @@ on:
       
 jobs:
   call-submodulebuild:
+    permissions:
+      contents: write
     uses: AbyssMod/Abyss/.github/workflows/submodulebuild.yml@main
