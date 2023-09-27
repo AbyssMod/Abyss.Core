@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <RootNamespace>Abyss</RootNamespace>
@@ -20,15 +19,22 @@
         <Version>0.0.1</Version>
 
         <Authors>GrahamKracker</Authors>
+        <DontUseDredgeLibs>true</DontUseDredgeLibs>
     </PropertyGroup>
 
     <ItemGroup>
-        <InternalsVisibleTo Include="Abyss.Items"/>
         <InternalsVisibleTo Include="Abyss.Abilities"/>
+        <InternalsVisibleTo Include="Abyss.Items"/>
+        <InternalsVisibleTo Include="Abyss.WorldEvents"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include=".github\workflows\build.yml" />
+        <None Include=".github\workflows\build.yml"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="GameReferences\" />
     </ItemGroup>
 
     <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>

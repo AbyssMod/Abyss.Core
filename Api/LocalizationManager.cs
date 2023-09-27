@@ -3,18 +3,27 @@ using UnityEngine.Localization;
 
 namespace Abyss.Api;
 
-internal static class LocalizationManager
+/// <summary>
+/// Handles localization for mods
+/// </summary>
+public static class LocalizationManager
 {
     internal static void AddModLocalization(LocalizedModContent localizedModContent)
     {
         localizedModContent.RegisterText(LocalizationDatabase);
     }
 
-    public static readonly Dictionary<string, string> LocalizationDatabase = new();
+    internal static readonly Dictionary<string, string> LocalizationDatabase = new();
 
+    /// <summary>
+    /// Creates a localized string with the given key, and adds the value and key to the localization database
+    /// </summary>
+    /// <param name="key"></param>
+    /// <param name="value"></param>
+    /// <returns></returns>
     public static LocalizedString CreateLocalizedString(string key, string value)
     {
         LocalizationDatabase[key] = value;
-        return new LocalizedString("Items" /*todo: figure out best thing to put here*/, key);
+        return new LocalizedString("Abyss", key);
     }
 }

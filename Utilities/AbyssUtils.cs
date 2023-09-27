@@ -1,17 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Abyss.Api;
 using Abyss.Extensions;
 using BepInEx;
 using BepInEx.Bootstrap;
 
-namespace Abyss;
+namespace Abyss.Utilities;
 
 /// <summary>
 ///
 /// </summary>
 public static class AbyssUtils
 {
+    internal static string AbyssFolder => Path.Combine(Paths.PluginPath, "Abyss");
+
     private static readonly IEnumerable<DredgeMod>? _dredgeMods;
 
     /// <summary>

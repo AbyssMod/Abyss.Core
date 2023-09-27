@@ -1,4 +1,4 @@
-﻿using static Abyss.AbyssUtils;
+﻿using static Abyss.Utilities.AbyssUtils;
 
 namespace Abyss;
 

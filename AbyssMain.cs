@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Abyss.Api;
 using Abyss.Events;
 using Abyss.UI;
@@ -89,10 +90,7 @@ internal sealed class AbyssMain : DredgeMod
                     modsMenu.SetActive(true);
                     modsMenuComponent.OnClick();
                 });
-
-                
             }
-
 
         }
         catch (Exception e)
