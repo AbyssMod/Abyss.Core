@@ -91,7 +91,7 @@ public abstract partial class ModContent : IModContent
         {
             AbyssLogger.Error($"Error creating default {type.Name}");
             AbyssLogger.Error("A zero argument constructor is REQUIRED for all ModContent classes");
-            AbyssLogger.Error(e);
+            AbyssLogger.Error(e.ToString());
             return null;
         }
 
@@ -125,7 +125,7 @@ public abstract partial class ModContent : IModContent
         {
             AbyssLogger.Error(
                 $"Failed loading instances of type {type.Name} for mod {type.Assembly.GetName().Name}");
-            AbyssLogger.Error(e);
+            AbyssLogger.Error(e.ToString());
         }
 
         return content;

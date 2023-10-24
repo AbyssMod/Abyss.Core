@@ -31,12 +31,7 @@
     <ItemGroup>
         <None Include=".github\workflows\build.yml"/>
     </ItemGroup>
-
-
-    <ItemGroup>
-      <Folder Include="GameReferences\" />
-    </ItemGroup>
-
+    
     <Import Condition="Exists('..\..\dredge.targets')" Project="..\..\dredge.targets"/>
     <Import Condition="!Exists('..\..\dredge.targets')" Project="dredge.targets"/>
 </Project>

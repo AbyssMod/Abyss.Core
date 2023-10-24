@@ -11,13 +11,13 @@ namespace Abyss.Utilities;
 /// <summary>
 /// Allows you to export game data to json files
 /// </summary>
-public static class Exporter
+public static class JsonExporter
 {
-    private static readonly fsSerializer Serializer = new();
+    internal static readonly fsSerializer Serializer = new();
 
-    /// <summary>
-    /// Exports the given object to the given path using <see cref="JsonUtility.ToJson(object)"/>, and removing the serializationData field
-    /// </summary>
+    /// <json>
+    /// Exports the given object to the given path
+    /// </json>
     /// <param name="obj"></param>
     /// <param name="path"></param>
     /// <param name="throwForNullObj"></param>

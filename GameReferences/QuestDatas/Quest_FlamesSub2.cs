@@ -1,15 +1,83 @@
 namespace Abyss.GameReferences.QuestDatas;
 public static class Quest_FlamesSub2
 {
-    public static UnityEngine.Localization.LocalizedString titleKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").titleKey;
-    public static UnityEngine.Localization.LocalizedString summaryKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").summaryKey;
-    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").resolutionKeys;
-    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").mapMarkersToRemoveOnCompletion;
+    public static QuestData Quest_FlamesSub2Instance = (QuestData)System.Linq.Enumerable.First(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2");
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString titleKey = Quest_FlamesSub2Instance.titleKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString summaryKey = Quest_FlamesSub2Instance.summaryKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString[]"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = Quest_FlamesSub2Instance.resolutionKeys;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[MapMarkerData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = Quest_FlamesSub2Instance.mapMarkersToRemoveOnCompletion;
     public static bool showUnseenIndicators = false;
-    public static System.Collections.Generic.List<QuestStepData> steps = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").steps;
-    public static System.Collections.Generic.List<QuestData> subquests = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").subquests;
-    public static QuestStepData onOfferedQuestStep = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").onOfferedQuestStep;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": true,
+     ///            "hiddenWhenComplete": true,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepData> steps = Quest_FlamesSub2Instance.steps;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestData> subquests = Quest_FlamesSub2Instance.subquests;
+     ///<json>
+     /// null
+     /// </json>
+    public static QuestStepData onOfferedQuestStep = null;
     public static bool canBeOfferedAutomatically = false;
-    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_FlamesSub2").offerConditions;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepCondition, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = Quest_FlamesSub2Instance.offerConditions;
     public static string PS5Subtask = "";
 }

@@ -13,6 +13,6 @@ internal static class GameManager_WaitForAllAsyncManagers
     [HarmonyPostfix]
     private static void Postfix()
     {
-        AbyssEvents.OnGameManagersLoaded.Invoke();
+        AbyssEvents.InvokeGameManagersLoaded();
     }
 }

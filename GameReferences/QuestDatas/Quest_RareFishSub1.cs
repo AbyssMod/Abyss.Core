@@ -1,15 +1,111 @@
 namespace Abyss.GameReferences.QuestDatas;
 public static class Quest_RareFishSub1
 {
-    public static UnityEngine.Localization.LocalizedString titleKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").titleKey;
-    public static UnityEngine.Localization.LocalizedString summaryKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").summaryKey;
-    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").resolutionKeys;
-    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").mapMarkersToRemoveOnCompletion;
+    public static QuestData Quest_RareFishSub1Instance = (QuestData)System.Linq.Enumerable.First(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1");
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString titleKey = Quest_RareFishSub1Instance.titleKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString summaryKey = Quest_RareFishSub1Instance.summaryKey;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        []
+     ///    ],
+     ///    "$type": "UnityEngine.Localization.LocalizedString[]"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = Quest_RareFishSub1Instance.resolutionKeys;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[MapMarkerData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = Quest_RareFishSub1Instance.mapMarkersToRemoveOnCompletion;
     public static bool showUnseenIndicators = false;
-    public static System.Collections.Generic.List<QuestStepData> steps = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").steps;
-    public static System.Collections.Generic.List<QuestData> subquests = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").subquests;
-    public static QuestStepData onOfferedQuestStep = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").onOfferedQuestStep;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": true,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": true,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": [
+     ///                {
+     ///                    "itemId": "oarfish",
+     ///                    "$type": "ItemSeenCondition"
+     ///                }
+     ///            ]
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepData> steps = Quest_RareFishSub1Instance.steps;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestData> subquests = Quest_RareFishSub1Instance.subquests;
+     ///<json>
+     /// null
+     /// </json>
+    public static QuestStepData onOfferedQuestStep = null;
     public static bool canBeOfferedAutomatically = false;
-    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_RareFishSub1").offerConditions;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepCondition, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = Quest_RareFishSub1Instance.offerConditions;
     public static string PS5Subtask = "";
 }

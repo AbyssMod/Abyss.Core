@@ -97,7 +97,8 @@ namespace FullSerializer {
                         properties.Add(new fsMetaProperty(config, property));
                     }
                 }
-                else if (field != null) {
+
+                else if (field != null && field.Name != "serializationData") { //TODO: find better way to do this
                     if (CanSerializeField(config, field, requireOptOut)) {
                         properties.Add(new fsMetaProperty(config, field));
                     }

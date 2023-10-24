@@ -1,15 +1,128 @@
 namespace Abyss.GameReferences.QuestDatas;
 public static class Quest_HoodedFigure3
 {
-    public static UnityEngine.Localization.LocalizedString titleKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").titleKey;
-    public static UnityEngine.Localization.LocalizedString summaryKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").summaryKey;
-    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").resolutionKeys;
-    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").mapMarkersToRemoveOnCompletion;
+    public static QuestData Quest_HoodedFigure3Instance = (QuestData)System.Linq.Enumerable.First(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3");
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString titleKey = Quest_HoodedFigure3Instance.titleKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString summaryKey = Quest_HoodedFigure3Instance.summaryKey;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        [],
+     ///        []
+     ///    ],
+     ///    "$type": "UnityEngine.Localization.LocalizedString[]"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = Quest_HoodedFigure3Instance.resolutionKeys;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[MapMarkerData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = Quest_HoodedFigure3Instance.mapMarkersToRemoveOnCompletion;
     public static bool showUnseenIndicators = true;
-    public static System.Collections.Generic.List<QuestStepData> steps = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").steps;
-    public static System.Collections.Generic.List<QuestData> subquests = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").subquests;
-    public static QuestStepData onOfferedQuestStep = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").onOfferedQuestStep;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepData> steps = Quest_HoodedFigure3Instance.steps;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestData> subquests = Quest_HoodedFigure3Instance.subquests;
+     ///<json>
+     /// null
+     /// </json>
+    public static QuestStepData onOfferedQuestStep = null;
     public static bool canBeOfferedAutomatically = false;
-    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_HoodedFigure3").offerConditions;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepCondition, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = Quest_HoodedFigure3Instance.offerConditions;
     public static string PS5Subtask = "";
 }

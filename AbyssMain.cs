@@ -42,9 +42,9 @@ internal sealed class AbyssMain : DredgeMod
             LocalizationManager.AddModLocalization(localizedModContent);
         }
 
-        GameObject term = new GameObject();
-        term.AddComponent<Terminal>();
-        DontDestroyOnLoad(term);
+        GameObject terminal = new GameObject("Abyss.Terminal");
+        terminal.AddComponent<Terminal>();
+        DontDestroyOnLoad(terminal);
 
         GameObject taskScheduler = new GameObject("Abyss.TaskScheduler");
         taskScheduler.AddComponent<TaskScheduler>();
@@ -59,7 +59,7 @@ internal sealed class AbyssMain : DredgeMod
     {
         try
         {
-            AbyssEvents.OnSceneLoaded.Invoke(scene);
+            AbyssEvents.InvokeSceneLoaded(scene);
 
             if (scene.name == "Title")
             {
@@ -96,7 +96,7 @@ internal sealed class AbyssMain : DredgeMod
         catch (Exception e)
         {
             AbyssLogger.Error("SceneLoaded errored: ");
-            AbyssLogger.Error(e);
+            AbyssLogger.Error(e.ToString());
         }
     }
 }

@@ -1,15 +1,83 @@
 namespace Abyss.GameReferences.QuestDatas;
 public static class Quest_ResearcherSubSecondSet
 {
-    public static UnityEngine.Localization.LocalizedString titleKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").titleKey;
-    public static UnityEngine.Localization.LocalizedString summaryKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").summaryKey;
-    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").resolutionKeys;
-    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").mapMarkersToRemoveOnCompletion;
+    public static QuestData Quest_ResearcherSubSecondSetInstance = (QuestData)System.Linq.Enumerable.First(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet");
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString titleKey = Quest_ResearcherSubSecondSetInstance.titleKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString summaryKey = Quest_ResearcherSubSecondSetInstance.summaryKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString[]"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = Quest_ResearcherSubSecondSetInstance.resolutionKeys;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[MapMarkerData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = Quest_ResearcherSubSecondSetInstance.mapMarkersToRemoveOnCompletion;
     public static bool showUnseenIndicators = false;
-    public static System.Collections.Generic.List<QuestStepData> steps = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").steps;
-    public static System.Collections.Generic.List<QuestData> subquests = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").subquests;
-    public static QuestStepData onOfferedQuestStep = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").onOfferedQuestStep;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepData> steps = Quest_ResearcherSubSecondSetInstance.steps;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestData> subquests = Quest_ResearcherSubSecondSetInstance.subquests;
+     ///<json>
+     /// null
+     /// </json>
+    public static QuestStepData onOfferedQuestStep = null;
     public static bool canBeOfferedAutomatically = false;
-    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_ResearcherSubSecondSet").offerConditions;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepCondition, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = Quest_ResearcherSubSecondSetInstance.offerConditions;
     public static string PS5Subtask = "";
 }

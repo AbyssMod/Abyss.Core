@@ -1,15 +1,237 @@
 namespace Abyss.GameReferences.QuestDatas;
 public static class Quest_CaughtToOrder
 {
-    public static UnityEngine.Localization.LocalizedString titleKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").titleKey;
-    public static UnityEngine.Localization.LocalizedString summaryKey = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").summaryKey;
-    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").resolutionKeys;
-    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").mapMarkersToRemoveOnCompletion;
+    public static QuestData Quest_CaughtToOrderInstance = (QuestData)System.Linq.Enumerable.First(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder");
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString titleKey = Quest_CaughtToOrderInstance.titleKey;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "UnityEngine.Localization.LocalizedString"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString summaryKey = Quest_CaughtToOrderInstance.summaryKey;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        []
+     ///    ],
+     ///    "$type": "UnityEngine.Localization.LocalizedString[]"
+     ///}
+     ///</json>
+    public static UnityEngine.Localization.LocalizedString[] resolutionKeys = Quest_CaughtToOrderInstance.resolutionKeys;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[MapMarkerData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<MapMarkerData> mapMarkersToRemoveOnCompletion = Quest_CaughtToOrderInstance.mapMarkersToRemoveOnCompletion;
     public static bool showUnseenIndicators = true;
-    public static System.Collections.Generic.List<QuestStepData> steps = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").steps;
-    public static System.Collections.Generic.List<QuestData> subquests = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").subquests;
-    public static QuestStepData onOfferedQuestStep = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").onOfferedQuestStep;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": true,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": true,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": true,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        },
+     ///        {
+     ///            "mapMarkersToAddOnStart": [],
+     ///            "mapMarkersToDeleteOnCompletion": [],
+     ///            "hiddenWhenActive": false,
+     ///            "hiddenWhenComplete": false,
+     ///            "shortActiveKey": [],
+     ///            "longActiveKey": [],
+     ///            "completedKey": [],
+     ///            "hideIfThisStepIsComplete": null,
+     ///            "showAtDock": false,
+     ///            "stepDock": null,
+     ///            "showAtSpeaker": false,
+     ///            "stepSpeaker": null,
+     ///            "yarnRootNode": "",
+     ///            "showConditions": [],
+     ///            "canBeFailed": false,
+     ///            "failureEvents": [],
+     ///            "allowAutomaticCompletion": false,
+     ///            "conditionMode": "ALL",
+     ///            "completeConditions": []
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepData> steps = Quest_CaughtToOrderInstance.steps;
+     ///<json>
+     /// {
+     ///    "$content": [],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestData, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestData> subquests = Quest_CaughtToOrderInstance.subquests;
+     ///<json>
+     /// {
+     ///    "mapMarkersToAddOnStart": [],
+     ///    "mapMarkersToDeleteOnCompletion": [],
+     ///    "hiddenWhenActive": false,
+     ///    "hiddenWhenComplete": true,
+     ///    "shortActiveKey": [],
+     ///    "longActiveKey": [],
+     ///    "completedKey": [],
+     ///    "hideIfThisStepIsComplete": null,
+     ///    "showAtDock": false,
+     ///    "stepDock": null,
+     ///    "showAtSpeaker": false,
+     ///    "stepSpeaker": null,
+     ///    "yarnRootNode": "",
+     ///    "showConditions": [],
+     ///    "canBeFailed": false,
+     ///    "failureEvents": [],
+     ///    "allowAutomaticCompletion": false,
+     ///    "conditionMode": "ALL",
+     ///    "completeConditions": [],
+     ///    "$type": "QuestStepData"
+     ///}
+     ///</json>
+    public static QuestStepData onOfferedQuestStep = Quest_CaughtToOrderInstance.onOfferedQuestStep;
     public static bool canBeOfferedAutomatically = true;
-    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = System.Linq.Enumerable.FirstOrDefault(ScriptableObjectInstances.QuestDatas, x => x.name == "Quest_CaughtToOrder").offerConditions;
+     ///<json>
+     /// {
+     ///    "$content": [
+     ///        {
+     ///            "day": 1,
+     ///            "$type": "DayCondition"
+     ///        }
+     ///    ],
+     ///    "$type": "System.Collections.Generic.List`1[[QuestStepCondition, Dredge_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+     ///}
+     ///</json>
+    public static System.Collections.Generic.List<QuestStepCondition> offerConditions = Quest_CaughtToOrderInstance.offerConditions;
     public static string PS5Subtask = "";
 }
