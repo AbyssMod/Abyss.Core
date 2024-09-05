@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Abyss.Api;
 using Abyss.Extensions;
+using Abyss.Utilities;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -18,6 +19,7 @@ namespace Abyss;
 [PublicAPI]
 public abstract class DredgeMod : BaseUnityPlugin, IModContent
 {
+    public static ManualLogSource StaticLogger => AbyssUtils.Main.Logger;
     /// <summary>
     /// The harmony instance for this mod, if <see cref="CreateHarmonyInstance"/> is false, it will be null
     /// </summary>

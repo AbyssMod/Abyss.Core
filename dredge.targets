@@ -5,7 +5,7 @@
         <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.abilities" ContinueOnError="true"/>
         <RemoveDir Directories="C:\Users\gjguz\.nuget\packages\abyss.poi" ContinueOnError="true"/>
 
-        <Exec Condition="'$(Configuration)' == 'Debug'" Command="dotnet restore C:\Users\gjguz\source\repos\Dredge\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
+        <Exec Condition="'$(Configuration)' == 'Debug'" Command="dotnet restore C:\Users\gjguz\source\repos\DREDGE\DredgeTest\DredgeTest.sln --configfile C:\Users\gjguz\source\repos\Dredge\DredgeTest\nuget.config"/>
     </Target>
 
     <PropertyGroup>
@@ -13,13 +13,16 @@
         <ManagedFolder>$(Dredge)\DREDGE_Data\Managed</ManagedFolder>
         <OutputFolder Condition="'$(OutputFolder)' == ''">BepInEx\plugins</OutputFolder>
         <RestoreAdditionalProjectSources>
-            https://nuget.bepinex.dev/v3/index.json;
             https://api.nuget.org/v3/index.json;
+            https://nuget.bepinex.dev/v3/index.json;
+            https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all"/>
         <PackageReference Include="BepInEx.Core" Version="5.*"/>
+        <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*"/>
     </ItemGroup>
 
     <PropertyGroup Condition="'$(DontUseDredgeLibs)' == 'true'">

@@ -26,12 +26,10 @@ internal sealed class AbyssMain : DredgeMod
     private const string Name = "Abyss.Core";
     private const string Version = "0.0.1";
 
-    public static readonly ManualLogSource UnityLog = new("Abyss Unity Log");
 
     private void Awake()
     {
         AbyssUtils.Main = this;
-        BepInEx.Logging.Logger.Sources.Add(UnityLog);
     }
 
     public override void Start()

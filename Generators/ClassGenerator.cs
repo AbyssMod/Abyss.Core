@@ -21,7 +21,7 @@ internal class ClassGenerator
         {
             var type = typeof(T);
 
-            var objname = obj.name.Replace(" ", "_").Replace("-", "_");
+            var objname = obj.name.Replace(" ", "_").Replace("-", "_").Replace(".", "_").Replace("(", "_").Replace(")", "_");
 
             var sb = new StringBuilder();
 
@@ -225,8 +225,7 @@ internal class ClassGenerator
                     typeHierarchy.Append(@"\");
             }
 
-            var dir = Path.Combine(@"C:\Users\gjguz\source\repos\Dredge\Abyss\Abyss.Core\GameReferences\", typeHierarchy.ToString());
-
+            var dir = Path.Combine(@"C:\Users\gjguz\source\repos\DREDGE\Abyss\Abyss.Core\GameReferences\", typeHierarchy.ToString());
             Directory.CreateDirectory(dir);
             File.WriteAllText(Path.Combine(dir, $"{obj.name}.cs"),
                 Generate(obj, baseType, "Abyss.GameReferences." + typeHierarchy.ToString().Replace(@"\", ".")));
